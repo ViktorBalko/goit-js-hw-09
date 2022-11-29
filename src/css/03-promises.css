@@ -1,6 +1,7 @@
 .form {
 display: flow-root;
 width: 170px;
+margin-bottom: 80px;
 }
 
 .form input {
@@ -16,7 +17,7 @@ background: radial-gradient(rgba(197, 211, 218, 0.034), rgba(2, 93, 121, 0.061))
 
 .button {
 display: block;
-margin-top: 10px;
+margin-top: 40px;
 width: 170px;
 height: 30px;
 border: 1.8px solid rgba(2, 57, 102, 0.423);

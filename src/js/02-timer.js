@@ -3,10 +3,10 @@ import 'flatpickr/dist/flatpickr.min.css';
 import Notiflix from 'notiflix';
 
 const startButton = document.querySelector('button');
-const daysElem = document.querySelector('.value[data-days]');
-const hoursElem = document.querySelector('.value[data-hours]');
-const minutesElem = document.querySelector('.value[data-minutes]');
-const secondsElem = document.querySelector('.value[data-seconds]');
+const elemDays = document.querySelector('.value[data-days]');
+const elemHours = document.querySelector('.value[data-hours]');
+const elemMinutes = document.querySelector('.value[data-minutes]');
+const elemSeconds = document.querySelector('.value[data-seconds]');
 
 let selectedDate = null;
 let intervalId = null;
@@ -48,10 +48,10 @@ function startCounter() {
 }
 
 function updateTimer({ days, hours, minutes, seconds }) {
-  daysElem.textContent = `${days}`;
-  hoursElem.textContent = `${hours}`;
-  minutesElem.textContent = `${minutes}`;
-  secondsElem.textContent = `${seconds}`;
+  elemDays.textContent = `${days}`;
+  elemHours.textContent = `${hours}`;
+  elemMinutes.textContent = `${minutes}`;
+  elemSeconds.textContent = `${seconds}`;
 }
 
 function addZero(value) {
