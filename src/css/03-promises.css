@@ -1,0 +1,24 @@
+.form {
+display: flow-root;
+width: 170px;
+}
+
+.form input {
+margin-bottom: 15px;
+display: block;
+width: 170px;
+height: 30px;
+padding-left: 30px;
+border: 1.8px solid rgba(2, 57, 102, 0.423);
+border-radius: 6px;
+background: radial-gradient(rgba(197, 211, 218, 0.034), rgba(2, 93, 121, 0.061));
+}
+
+.button {
+display: block;
+margin-top: 10px;
+width: 170px;
+height: 30px;
+border: 1.8px solid rgba(2, 57, 102, 0.423);
+border-radius: 6px;
+}
