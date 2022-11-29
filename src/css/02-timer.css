@@ -1,0 +1,14 @@
+.timer {
+                 display: flex;
+                 padding-top: 10px;
+}
+
+.field {
+                 display: flex;
+                 /* flex-direction: column; */
+                 flex-direction: row;
+                 margin-right: 15px;
+                 justify-content: center;
+                 align-items: center;
+                 font-size: 20px;
+}
