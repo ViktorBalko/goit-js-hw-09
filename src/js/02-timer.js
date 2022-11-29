@@ -2,16 +2,16 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 import Notiflix from 'notiflix';
 
-const startBtn = document.querySelector('button');
-const daysEl = document.querySelector('.value[data-days]');
-const hoursEl = document.querySelector('.value[data-hours]');
-const minutesEl = document.querySelector('.value[data-minutes]');
-const secondsEl = document.querySelector('.value[data-seconds]');
+const startButton = document.querySelector('button');
+const daysElem = document.querySelector('.value[data-days]');
+const hoursElem = document.querySelector('.value[data-hours]');
+const minutesElem = document.querySelector('.value[data-minutes]');
+const secondsElem = document.querySelector('.value[data-seconds]');
 
 let selectedDate = null;
 let intervalId = null;
 
-startBtn.disabled = true;
+startButton.disabled = true;
 
 const options = {
   enableTime: true,
@@ -23,7 +23,7 @@ const options = {
       return Notiflix.Notify.failure('Please choose a date in the future');
     } else {
       Notiflix.Notify.success('The selected date is valid!');
-      startBtn.disabled = false;
+      startButton.disabled = false;
       selectedDate = selectedDates[0].getTime();
     }
   },
@@ -41,17 +41,17 @@ function startCounter() {
       return;
     }
 
-    startBtn.disabled = true;
+    startButton.disabled = true;
 
     updateTimer({ days, hours, minutes, seconds });
   }, 1000);
 }
 
 function updateTimer({ days, hours, minutes, seconds }) {
-  daysEl.textContent = `${days}`;
-  hoursEl.textContent = `${hours}`;
-  minutesEl.textContent = `${minutes}`;
-  secondsEl.textContent = `${seconds}`;
+  daysElem.textContent = `${days}`;
+  hoursElem.textContent = `${hours}`;
+  minutesElem.textContent = `${minutes}`;
+  secondsElem.textContent = `${seconds}`;
 }
 
 function addZero(value) {
@@ -59,22 +59,22 @@ function addZero(value) {
 }
 
 function convertMs(ms) {
-  // Number of milliseconds per unit of time
+  // Кількість мілісекунд на одиницю часу
   const second = 1000;
   const minute = second * 60;
   const hour = minute * 60;
   const day = hour * 24;
 
-  // Remaining days
+  // Решта днів
   const days = addZero(Math.floor(ms / day));
-  // Remaining hours
+  // Решта годин
   const hours = addZero(Math.floor((ms % day) / hour));
-  // Remaining minutes
+  // Решта хвилин
   const minutes = addZero(Math.floor(((ms % day) % hour) / minute));
-  // Remaining seconds
+  // Решта секунд
   const seconds = addZero(Math.floor((((ms % day) % hour) % minute) / second));
 
   return { days, hours, minutes, seconds };
 }
 
-startBtn.addEventListener('click', startCounter);
+startButton.addEventListener('click', startCounter);
