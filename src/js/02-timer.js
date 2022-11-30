@@ -59,19 +59,19 @@ function addZero(value) {
 }
 
 function convertMs(ms) {
-  // Кількість мілісекунд на одиницю часу
+  // кількість мілісекунд на одиницю часу
   const second = 1000;
   const minute = second * 60;
   const hour = minute * 60;
   const day = hour * 24;
 
-  // Решта днів
+  // решта днів
   const days = addZero(Math.floor(ms / day));
-  // Решта годин
+  // решта годин
   const hours = addZero(Math.floor((ms % day) / hour));
-  // Решта хвилин
+  // решта хвилин
   const minutes = addZero(Math.floor(((ms % day) % hour) / minute));
-  // Решта секунд
+  // решта секунд
   const seconds = addZero(Math.floor((((ms % day) % hour) % minute) / second));
 
   return { days, hours, minutes, seconds };

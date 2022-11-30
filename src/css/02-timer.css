@@ -3,9 +3,9 @@ display: block;
 width: 170px;
 height: 30px;
 padding-left: 30px;
-border: 1.8px solid rgba(2, 57, 102, 0.423);
+border: 1.2px solid rgba(2, 57, 102, 0.423);
 border-radius: 7px;
-background: radial-gradient(rgba(210, 223, 230, 0.123), rgba(214, 230, 235, 0.269));
+/* background: radial-gradient(rgba(210, 223, 230, 0.123), rgba(214, 230, 235, 0.269)); */
 }
 
 .button {
@@ -13,7 +13,7 @@ display: block;
 margin-top: 10px;
 width: 170px;
 height: 30px;
-border: 1.8px solid rgba(2, 57, 102, 0.423);
+border: 1.2px solid rgba(2, 57, 102, 0.423);
 border-radius: 7px;
 }
 
@@ -35,9 +35,9 @@ margin-bottom: 10px;
 align-items: center;
 font-size: 15px;
 color: rgba(2, 57, 102, 0.555);
-border: 1.8px solid rgba(2, 57, 102, 0.423);
+border: 1.2px solid rgba(2, 57, 102, 0.423);
 border-radius: 7px;
-background: radial-gradient(rgba(210, 223, 230, 0.123), rgba(214, 230, 235, 0.269));}
+/* background: radial-gradient(rgba(210, 223, 230, 0.123), rgba(214, 230, 235, 0.269));} */
 
 
 
